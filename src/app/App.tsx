@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Suspense } from 'react';
 import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
-import { useTheme } from 'app/providers';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 import './styles/index.scss';
 

@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeContextProvider } from 'app/providers';
+import { ThemeContextProvider } from 'app/providers/ThemeProvider';
 import App from 'app/App';
 
 const root = createRoot(document.getElementById('root'));
