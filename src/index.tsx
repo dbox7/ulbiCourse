@@ -1,14 +1,14 @@
 import { createRoot } from 'react-dom/client';
-import App from "./App";
 import { BrowserRouter } from 'react-router-dom';
-import ThemeContextProvider from './theme/ThemeContextProvider';
+import { ThemeContextProvider } from 'app/providers';
+import App from 'app/App';
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-      <BrowserRouter>
-      <ThemeContextProvider>
-        <App />
-      </ThemeContextProvider>
-      </BrowserRouter>
-      )
+  <BrowserRouter>
+  <ThemeContextProvider>
+    <App />
+  </ThemeContextProvider>
+  </BrowserRouter>
+)
