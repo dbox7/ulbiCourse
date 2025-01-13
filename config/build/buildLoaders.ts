@@ -19,7 +19,7 @@ export const buildLoaders = (mode: BuildMode): RuleSetRule[] => {
       {
         loader: 'css-loader',
         options: {
-          // sourceMap: true,
+          sourceMap: true,
           // esModule: true,
           modules: {
             auto: /\.module\./,
@@ -33,7 +33,23 @@ export const buildLoaders = (mode: BuildMode): RuleSetRule[] => {
     ]
   }
 
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  }
+
+  const fileLoader =  {
+    test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  }
+
   return [
+    svgLoader,
+    fileLoader,
     tsLoader,
     cssLoader
   ]
