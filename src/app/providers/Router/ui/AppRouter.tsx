@@ -8,6 +8,7 @@ export const AppRouter = () => {
       <Routes>
         {routeConfig.map(route => (
             <Route 
+              key={route.path}
               path={route.path}
               element={(
                 <div className="pageWrapper">{

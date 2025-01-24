@@ -31,7 +31,13 @@ export const buildLoaders = (mode: BuildMode): RuleSetRule[] => {
       options: {
         presets: ['@babel/preset-env'],
         plugins: [
-          ["i18next-extract", {"nsSeparator": "~"}],
+          [
+            "i18next-extract", 
+            {
+              nsSeparator: "~",
+              locales: ['ru', 'en']
+            }
+          ],
         ]
       }
     }
