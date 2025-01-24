@@ -9,6 +9,7 @@ import LigthThemeIcon from 'shared/assets/icons/light_theme.svg';
 import { useTheme } from "app/providers/ThemeProvider";
 import { customButtonTheme } from "shared/ui/CustomButton/ui/CustomButton";
 import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 interface INavbarProps {
   className?: string;
@@ -17,6 +18,7 @@ interface INavbarProps {
 export const Navbar: FC<INavbarProps> = ({className}) => {
 
   const {theme, toggleTheme} = useTheme();
+  const {t} = useTranslation();
 
   return ( 
     <div className={classNames(cls.navbar, {}, [className])}>
@@ -30,8 +32,8 @@ export const Navbar: FC<INavbarProps> = ({className}) => {
             : <LigthThemeIcon width={30} fill='lightGrey' />
         }
       </CustomButton>
-      <CustomLink to='/'>Главная</CustomLink>
-      <CustomLink to='/about'>О нас</CustomLink>
+      <CustomLink to='/'>{t('NavbarLinkToMainPage') as string}</CustomLink>
+      <CustomLink to='/about'>{t('NavbarLinkToAboutPage') as string}</CustomLink>
     </div>
   );
 }
