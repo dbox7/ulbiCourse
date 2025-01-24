@@ -23,6 +23,19 @@ export const buildLoaders = (mode: BuildMode): RuleSetRule[] => {
     exclude: /node_modules/,
   };
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          ["i18next-extract", {"nsSeparator": "~"}],
+        ]
+      }
+    }
+  }
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
@@ -62,6 +75,7 @@ export const buildLoaders = (mode: BuildMode): RuleSetRule[] => {
   return [
     svgLoader,
     fileLoader,
+    babelLoader,
     tsLoader,
     cssLoader
   ]
