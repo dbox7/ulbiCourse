@@ -1,3 +1,3 @@
-node_modules/
-/build/
-extractedTranslations
+/build
+node_modules
+.idea
