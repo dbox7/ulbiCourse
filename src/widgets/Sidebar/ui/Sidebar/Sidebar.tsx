@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren, useState } from "react";
-import { classNames } from "shared/lib/ClassNames/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 
 import cls from './Sidebar.module.scss';
 import { CustomButton } from "shared/ui/CustomButton";
 import { LangSwitcher } from "widgets/LangSwitcher";
 
-interface SidebarProps extends PropsWithChildren {
+interface SidebarProps extends PropsWithChildren<{}> {
   className?: string;
 }
 

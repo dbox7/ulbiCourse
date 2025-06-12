@@ -2,7 +2,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import type { WebpackPluginInstance } from 'webpack'
 import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin } from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export const buildPlugin = (pathToHTMLFile: string, isDev: boolean): WebpackPluginInstance[] => {
   return [
@@ -18,6 +17,5 @@ export const buildPlugin = (pathToHTMLFile: string, isDev: boolean): WebpackPlug
       __IS_DEV__: isDev
     }),
     new HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin(),
   ]
 }

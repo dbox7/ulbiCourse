@@ -1,11 +1,11 @@
-import { FC, PropsWithChildren } from 'react';
-import { classNames } from 'shared/lib/ClassNames/classNames';
+import { FC } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 import cls from './LangSwitcher.module.scss';
 import { CustomButton } from 'shared/ui/CustomButton';
 import { useTranslation } from 'react-i18next';
 
-interface LangSwitcherProps extends PropsWithChildren {
+interface LangSwitcherProps {
   className?: string;
 }
 
