@@ -1,5 +1,7 @@
 {
   "NavbarLinkToMainPage": "Main page",
   "NavbarLinkToAboutPage": "About",
-  "LangSwitcherText": "EN"
+  "LangSwitcherText": "EN",
+  "Something was wrong": "Something was wrong",
+  "Back to main page": "Back to main page"
 }
