@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from 'shared/lib/classNames/classNames';
 
 import cls from './Sidebar.module.scss';
 import { CustomButton } from "shared/ui/CustomButton";
@@ -18,8 +18,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   }
 
   return ( 
-    <div className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])}>
-      <CustomButton onClick={handleCollapse} className={cls.collapseButton}>Скрыть</CustomButton>
+    <div className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])} data-testid='Sidebar'>
+      <CustomButton onClick={handleCollapse} className={cls.collapseButton} data-testid='SidebarToggle'>Скрыть</CustomButton>
       <div className={cls.sidebarFooter}>
         <LangSwitcher />
       </div>

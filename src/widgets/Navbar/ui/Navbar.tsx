@@ -21,7 +21,7 @@ export const Navbar: FC<INavbarProps> = ({className}) => {
   const {t} = useTranslation();
 
   return ( 
-    <div className={classNames(cls.navbar, {}, [className])}>
+    <div className={classNames(cls.navbar, {}, [className])} data-testid='Navbar'>
       <CustomButton
         onClick={toggleTheme}
         theme={customButtonTheme.CLEAR}
